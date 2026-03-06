@@ -1,16 +1,5 @@
-name: Manual Run
-
-on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: "Select log level"
-        required: true
-        default: "info"
-
-jobs:
-  show-inputs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print Input
-        run: echo "Log level is: ${{ github.event.inputs.logLevel }}"
+- name: Test step
+        run: |
+          echo "Hello!"
+          echo "Log level: ${{ github.event.inputs.logLevel }}"
+          echo "Runner is working fine."
